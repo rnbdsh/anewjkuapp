@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import org.voidsink.anewjkuapp.R;
-import org.voidsink.anewjkuapp.view.CalendarCardListView;
+import org.voidsink.anewjkuapp.base.StickyCardArrayAdapter;
 
 import java.text.DateFormat;
 import java.util.Calendar;
@@ -15,15 +15,11 @@ import java.util.Date;
 import java.util.List;
 
 import it.gmariotti.cardslib.library.internal.Card;
-import it.gmariotti.cardslib.library.internal.CardArrayAdapter;
-import se.emilsjolander.stickylistheaders.StickyListHeadersAdapter;
 
 /**
  * Created by paul on 06.09.2014.
  */
-public class CalendarCardArrayAdapter extends CardArrayAdapter implements StickyListHeadersAdapter {
-
-    protected CalendarCardListView mCardListView;
+public class CalendarCardArrayAdapter extends StickyCardArrayAdapter {
 
     /**
      * Constructor
@@ -34,7 +30,6 @@ public class CalendarCardArrayAdapter extends CardArrayAdapter implements Sticky
     public CalendarCardArrayAdapter(Context context, List<Card> cards) {
         super(context, cards);
     }
-
 
     @Override
     public View getHeaderView(int position, View convertView, ViewGroup viewGroup) {
@@ -64,12 +59,4 @@ public class CalendarCardArrayAdapter extends CardArrayAdapter implements Sticky
         }
         return 0;
     }
-
-
-    /**
-     * @param cardListView
-     *            cardListView
-     */
-    public void setCardListView(CalendarCardListView cardListView) {
-        this.mCardListView = cardListView;
-    }}
+}

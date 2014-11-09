@@ -16,6 +16,10 @@
         <item name="android:actionOverflowButtonStyle">@style/AppTheme.ActionButton.Overflow</item>
         <item name="themed_card_menu_button_overflow">@drawable/card_menu_button_rounded_overflow</item>
         <item name="themed_card_menu_button_expand">@drawable/card_menu_button_expand</item>
+        <item name="themed_card_menu_button_overflow_material">@drawable/card_menu_button_overflow_material</item>
+        <item name="themed_card_menu_button_expand_material_animator">@drawable/card_menu_button_expand_material_animator</item>
+        <item name="themed_ic_menu_overflow_card_rounded_dark_normal">@drawable/ic_menu_overflow_card_rounded_dark_normal</item>
+        <item name="themed_ic_menu_expand_card_dark_normal">@drawable/ic_menu_expand_card_dark_normal</item>
         <item name="android:homeAsUpIndicator">@drawable/ic_ab_back</item>
     </style>
 
@@ -31,6 +35,10 @@
         <item name="android:actionOverflowButtonStyle">@style/AppTheme.ActionButton.Overflow</item>
         <item name="themed_card_menu_button_overflow">@drawable/card_menu_button_rounded_overflow_holo</item>
         <item name="themed_card_menu_button_expand">@drawable/card_menu_button_expand_holo</item>
+        <item name="themed_card_menu_button_overflow_material">@drawable/card_menu_button_overflow_material_holo</item>
+        <item name="themed_card_menu_button_expand_material_animator">@drawable/card_menu_button_expand_material_animator_holo</item>
+        <item name="themed_ic_menu_overflow_card_rounded_dark_normal">@drawable/card_menu_button_rounded_overflow_holo</item>
+        <item name="themed_ic_menu_expand_card_dark_normal">@drawable/ic_menu_expand_card_light_normal</item>
         <item name="android:homeAsUpIndicator">@drawable/ic_ab_back</item>
     </style>
 

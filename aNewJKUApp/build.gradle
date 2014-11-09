@@ -4,12 +4,12 @@ android {
         config {
         }
     }
-    compileSdkVersion 19
-    buildToolsVersion "20.0.0"
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
     defaultConfig {
         applicationId "org.voidsink.anewjkuapp"
         minSdkVersion 14
-        targetSdkVersion 19
+        targetSdkVersion 21
     }
     buildTypes {
         release {
@@ -39,10 +39,11 @@ android {
 dependencies {
     compile 'de.cketti.library.changelog:ckchangelog:1.2.1'
     compile project(':voidsinkContributors')
-    compile 'com.android.support:support-v4:20.0.0'
+    compile 'com.android.support:support-v4:21.0.0'
     compile 'com.github.japgolly.android:svg-android:2.0.6'
-    compile 'com.google.android.gms:play-services:5.0.89'
-    compile 'com.github.gabrielemariotti.cards:library:1.9.1'
+    compile 'com.google.android.gms:play-services:6.1.71'
+    compile 'com.github.gabrielemariotti.cards:cardslib-core:2.0.0'
+    compile 'com.github.gabrielemariotti.cards:cardslib-cards:2.0.0'
     compile 'se.emilsjolander:stickylistheaders:2.5.2'
     compile 'com.google.android.apps.dashclock:dashclock-api:2.0.0'
     compile 'org.mnode.ical4j:ical4j:1.0.6'

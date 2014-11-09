@@ -17,7 +17,7 @@ import org.voidsink.anewjkuapp.mensa.Mensa;
 import org.voidsink.anewjkuapp.mensa.MensaDay;
 import org.voidsink.anewjkuapp.mensa.MensaMenu;
 import org.voidsink.anewjkuapp.mensa.MenuLoader;
-import org.voidsink.anewjkuapp.view.MenuCardListView;
+import org.voidsink.anewjkuapp.view.StickyCardListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,16 +27,16 @@ import it.gmariotti.cardslib.library.internal.Card;
 public abstract class MensaFragmentDetail extends BaseFragment {
 
 	public static final String TAG = MensaFragmentDetail.class.getSimpleName();
-    private MenuCardListView mListView;
+    private StickyCardListView mListView;
     private MenuCardArrayAdapter mAdapter;
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.fragment_card_menu, container,
+		View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_card_menu, container,
 				false);
 
-		mListView = (MenuCardListView) view.findViewById(R.id.menu_card_list);
+		mListView = (StickyCardListView) view.findViewById(R.id.menu_card_list);
 		mAdapter = new MenuCardArrayAdapter(getContext(), new ArrayList<Card>(), true);
 		mListView.setAdapter(mAdapter);
 

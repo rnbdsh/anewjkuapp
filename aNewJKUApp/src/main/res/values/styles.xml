@@ -64,11 +64,25 @@
         <item name="android:layout_marginBottom">@dimen/card_header_simple_title_margin_bottom</item>
     </style>
 
+    <style name="card.native.header_simple_title" >
+        <item name="android:textSize">@dimen/card_header_native_simple_title_text_size</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:layout_gravity">left|center_vertical</item>
+        <item name="android:layout_marginLeft">@dimen/card_header_native_simple_title_margin_left</item>
+        <item name="android:layout_marginTop">@dimen/card_header_native_simple_title_margin_top</item>
+        <item name="android:layout_marginRight">@dimen/card_header_native_simple_title_margin_right</item>
+        <item name="android:layout_marginBottom">@dimen/card_header_native_simple_title_margin_bottom</item>
+    </style>
+
     <!-- Button Overflow in Header for themed cards-->
     <attr name="themed_card_menu_button_overflow" format="reference"/>
     <style name="card.header_button_base.overflow" >
         <item name="android:background">?attr/themed_card_menu_button_overflow</item>
-        <item name="android:layout_marginRight">@dimen/card_header_button_overflow_margin_right</item>
+    </style>
+
+    <attr name="themed_card_menu_button_overflow_material" format="reference"/>
+    <style name="card.native.header_button_base.overflow">
+        <item name="android:background">?attr/themed_card_menu_button_overflow_material</item>
     </style>
 
     <!-- Button to Expand/Collapse in Header for themed cards-->
@@ -77,6 +91,10 @@
         <item name="android:background">?attr/themed_card_menu_button_expand</item>
     </style>
 
+    <attr name="themed_card_menu_button_expand_material_animator" format="reference"/>
+    <style name="card.native.header_button_base.expand">
+        <item name="android:background">?attr/themed_card_menu_button_expand_material_animator</item>
+    </style>
 
     <attr name="themed_plot_background_color" format="reference"/>
     <style name="plotStyle">

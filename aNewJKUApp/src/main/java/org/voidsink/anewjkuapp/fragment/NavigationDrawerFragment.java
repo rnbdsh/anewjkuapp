@@ -134,7 +134,7 @@ public class NavigationDrawerFragment extends BaseFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(R.layout.fragment_navigation_drawer,
+		View rootView = getActivity().getLayoutInflater().inflate(R.layout.fragment_navigation_drawer,
 				container, false);
 
 		View mDrawer = rootView.findViewById(R.id.drawer);

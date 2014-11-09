@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -18,39 +19,36 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <it.gmariotti.cardslib.library.view.CardView
+            <it.gmariotti.cardslib.library.view.CardViewNative
                 android:id="@+id/stat_card_lva"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="12dp" />
+                card:card_layout_resourceID="@layout/native_cardwithlist_layout"
+                style="@style/card_external"/>
 
             <!-- Empty view-->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="15dp" />
 
-            <it.gmariotti.cardslib.library.view.CardView
+            <it.gmariotti.cardslib.library.view.CardViewNative
                 android:id="@+id/stat_card_grade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="12dp" />
+                card:card_layout_resourceID="@layout/native_cardwithlist_layout"
+                style="@style/card_external"/>
 
             <!-- Empty view-->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="15dp" />
 
-            <it.gmariotti.cardslib.library.view.CardView
+            <it.gmariotti.cardslib.library.view.CardViewNative
                 android:id="@+id/stat_card_grade_weighted"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:layout_marginTop="12dp" />
+                card:card_layout_resourceID="@layout/native_cardwithlist_layout"
+                style="@style/card_external"/>
 
         </LinearLayout>
 

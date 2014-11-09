@@ -16,7 +16,7 @@ public class OehRightsFragment extends BaseFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.fragment_oeh_rights, container,
+		View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_oeh_rights, container,
 				false);
 
 		((TextView) view.findViewById(R.id.oeh_rights_1_summary))

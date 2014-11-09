@@ -16,7 +16,7 @@ public class OehInfoFragment extends BaseFragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		View view = inflater.inflate(R.layout.fragment_oeh_info, container,
+		View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_oeh_info, container,
 				false);
 
 		((TextView) view.findViewById(R.id.oeh_info_main_summary))

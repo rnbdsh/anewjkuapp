@@ -22,7 +22,7 @@ import org.voidsink.anewjkuapp.mensa.MensaDay;
 import org.voidsink.anewjkuapp.mensa.MensaMenu;
 import org.voidsink.anewjkuapp.mensa.MenuLoader;
 import org.voidsink.anewjkuapp.mensa.RaabMenuLoader;
-import org.voidsink.anewjkuapp.view.MenuCardListView;
+import org.voidsink.anewjkuapp.view.StickyCardListView;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -35,20 +35,25 @@ import it.gmariotti.cardslib.library.internal.Card;
  */
 public class MensaDayFragment extends BaseFragment {
 
-    private Date mDate;
-
     public static final String TAG = MensaDayFragment.class.getSimpleName();
-    private MenuCardListView mListView;
-    private MenuCardArrayAdapter mAdapter;
     private static final List<Mensa> mMensen = new ArrayList<>();
+    private Date mDate;
+    private StickyCardListView mListView;
+    private MenuCardArrayAdapter mAdapter;
+
+    public MensaDayFragment() {
+        super();
+
+        this.mDate = new Date();
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_card_menu, container,
+        View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_card_menu, container,
                 false);
 
-        mListView = (MenuCardListView) view.findViewById(R.id.menu_card_list);
+        mListView = (StickyCardListView) view.findViewById(R.id.menu_card_list);
         mAdapter = new MenuCardArrayAdapter(getContext(), new ArrayList<Card>(), false);
         mListView.setAdapter(mAdapter);
 
@@ -63,12 +68,6 @@ public class MensaDayFragment extends BaseFragment {
         new MenuLoadTask(new ChoiceMenuLoader(), 1).execute();
         new MenuLoadTask(new KHGMenuLoader(), 2).execute();
         new MenuLoadTask(new RaabMenuLoader(), 3).execute();
-    }
-
-    public MensaDayFragment() {
-        super();
-
-        this.mDate = new Date();
     }
 
     public void setDate(Date mDate) {

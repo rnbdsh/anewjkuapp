@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <org.voidsink.anewjkuapp.view.CalendarCardListView
+    <org.voidsink.anewjkuapp.view.StickyCardListView
         android:id="@+id/calendar_card_events"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -11,7 +12,8 @@
         android:scrollbarStyle="outsideOverlay"
         android:paddingBottom="@dimen/card_content_padding"
         android:layout_above="@+id/calendar_card_footer"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        card:list_card_layout_resourceID="@layout/native_list_card_layout"/>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"

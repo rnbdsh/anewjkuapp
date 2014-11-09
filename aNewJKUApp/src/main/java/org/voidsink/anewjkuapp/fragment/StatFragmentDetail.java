@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import it.gmariotti.cardslib.library.view.CardView;
+import it.gmariotti.cardslib.library.view.CardViewNative;
 
 @SuppressLint("ValidFragment")
 public class StatFragmentDetail extends BaseFragment {
@@ -50,19 +50,19 @@ public class StatFragmentDetail extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.fragment_stats, container, false);
+        mView = getActivity().getLayoutInflater().inflate(R.layout.fragment_stats, container, false);
 
-        CardView cv = (CardView) mView.findViewById(R.id.stat_card_lva);
+        CardViewNative cv = (CardViewNative) mView.findViewById(R.id.stat_card_lva);
         mStatCardLva = new StatCardLva(getContext(), this.mTerms, this.mLvas, this.mGrades);
         mStatCardLva.init();
         cv.setCard(mStatCardLva);
 
-        cv = (CardView) mView.findViewById(R.id.stat_card_grade);
+        cv = (CardViewNative) mView.findViewById(R.id.stat_card_grade);
         mStatCardGrade = new StatCardGrade(getContext(), this.mTerms, this.mGrades, false);
         mStatCardGrade.init();
         cv.setCard(mStatCardGrade);
 
-        cv = (CardView) mView.findViewById(R.id.stat_card_grade_weighted);
+        cv = (CardViewNative) mView.findViewById(R.id.stat_card_grade_weighted);
         mStatCardGradeWeighted = new StatCardGrade(getContext(), this.mTerms, this.mGrades, true);
         mStatCardGradeWeighted.init();
         cv.setCard(mStatCardGradeWeighted);

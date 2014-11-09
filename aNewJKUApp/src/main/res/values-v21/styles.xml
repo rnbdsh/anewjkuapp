@@ -1,0 +1,16 @@
+<resources>
+
+    <!-- for themed cards-->
+    <!-- Button Overflow in Header -->
+    <attr name="themed_ic_menu_overflow_card_rounded_dark_normal" format="reference"/>
+    <style name="card.header_button_base.overflow">
+        <item name="android:src">?attr/themed_ic_menu_overflow_card_rounded_dark_normal</item>
+    </style>
+
+    <!-- Button to Expand/Collapse in Header -->
+    <attr name="themed_ic_menu_expand_card_dark_normal" format="reference"/>
+    <style name="card.header_button_base.expand">
+        <item name="android:src">?attr/themed_ic_menu_expand_card_dark_normal</item>
+    </style>
+
+</resources>
